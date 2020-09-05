@@ -10,11 +10,11 @@
 
 // Do not edit the code below.
 var carDetails = {
-  color: 'red',
-  make: 'toyota',
-  model: 'tacoma',
-  year: 1994
-}
+  color: "red",
+  make: "toyota",
+  model: "tacoma",
+  year: 1994,
+};
 // Do not edit the code above.
 
 /*
@@ -22,8 +22,7 @@ var carDetails = {
 */
 
 //Code Here
-
-
+const { color, make, model, year } = carDetails;
 
 ////////// PROBLEM 2 //////////
 
@@ -33,15 +32,13 @@ var carDetails = {
   The property names are firstName, lastName, and title.
 */
 
-function greeting( obj ) {
+function greeting(obj) {
   //Code Here
-  
+  const { firstName, lastName, title } = obj;
   // Do not edit the code below.
-  return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
+  return "Hello, " + title + " " + firstName + " " + lastName + "!";
   // Do not edit the code above.
 }
-
-
 
 ////////// PROBLEM 3 //////////
 
@@ -54,9 +51,11 @@ function greeting( obj ) {
 */
 
 //Code Here
+const totalPopulation = (obj) => {
+  const { utah, california, texas, arizona } = obj;
 
-
-
+  return utah + california + texas + arizona;
+};
 ////////// PROBLEM 4 //////////
 
 /*
@@ -68,9 +67,17 @@ function greeting( obj ) {
 */
 
 //Code Here
+const ingredients = (obj) => {
+  const arr = [];
 
+  const { carb, fat, protein } = obj;
 
+  arr.push(carb);
+  arr.push(fat);
+  arr.push(protein);
 
+  return arr;
+};
 ////////// PROBLEM 5 //////////
 
 /*
@@ -86,9 +93,17 @@ function greeting( obj ) {
 */
 
 //Code Here
+const largeNumbers = ({ first, second, third }) => {
+  const arr = [first, second, third];
 
+  let finalValue = first;
 
+  arr.forEach((num) => {
+    if (num < finalValue) finalValue = num;
+  });
 
+  return finalValue;
+};
 ////////// PROBLEM 6 //////////
 
 /*
@@ -98,5 +113,13 @@ function greeting( obj ) {
 */
 
 //Code Here
+const numberGroups = ({ a, b, c }) => {
+  let finalArr = a;
 
+  const arr = [a, b, c];
+  arr.forEach((arr) => {
+    if (arr.length > finalArr.length) finalArr = arr;
+  });
 
+  return finalArr;
+};
